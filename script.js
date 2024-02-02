@@ -325,7 +325,7 @@ document.querySelector('#seven').addEventListener('click',playerClicked7)
 document.querySelector('#eight').addEventListener('click',playerClicked8)
 document.querySelector('#nine').addEventListener('click',playerClicked9)   
 
-// if(count>=10)
-// {
-//     alert('Game Over');
-// }
+if(count>=10)
+{
+    alert('Game Over');
+}
