@@ -43,15 +43,15 @@ function gameStateCheck()
         }
         
     }
-    else if((currentState[3]!=0 && currentState[4] !=0 && currentState[5]!=0))
+    else if(currentState[3] !=0 && currentState[4] !=0 && currentState[5] != 0)
     {
-        if(currentState[3]== currentState[4] == currentState[5]==1)
+        if(currentState[3]== 1 && currentState[4] == 1 && currentState[5]==1)
         {
             alert('player1 won');
             resetGame();
             return;
         }
-        else if(currentState[3]==currentState[4] ==currentState[5]==2)
+        else if(currentState[3]==2 && currentState[4] == 2 &&  currentState[5]==2)
         {
             alert('player2 won');
             resetGame();
@@ -106,13 +106,13 @@ function gameStateCheck()
     }
     else if((currentState[2] !=0 && currentState[5] !=0 && currentState[8]!=0))
     {
-        if(currentState[2] == 1 && currentState[5] == 1 && currentState[8] !=1 )
+        if(currentState[2] == 1 && currentState[5] == 1 && currentState[8] ==1 )
         {
             alert('player1 won');
             resetGame();
             return;
         }
-        else if (currentState[2] == 2 && currentState[5] == 2 && currentState[8] !=2 )
+        else if (currentState[2] == 2 && currentState[5] == 2 && currentState[8] ==2 )
         {
             alert('player2 won');
             resetGame();
@@ -325,7 +325,7 @@ document.querySelector('#seven').addEventListener('click',playerClicked7)
 document.querySelector('#eight').addEventListener('click',playerClicked8)
 document.querySelector('#nine').addEventListener('click',playerClicked9)   
 
-if(count>=10)
-{
-    alert('Game Over');
-}
+// if(count>=10)
+// {
+//     alert('Game Over');
+// }
