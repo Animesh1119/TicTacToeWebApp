@@ -2,9 +2,7 @@
 //false = p2
 
 let currentState = new Array(9);
-currentState=[0,0,0,
-    0,0,0,
-    0,0,0];
+currentState=[0,0,0,0,0,0,0,0,0];
 let count=0
 
 tile1=document.querySelector('#one');
@@ -20,6 +18,12 @@ tile9=document.querySelector('#nine');
 
 turn = true;
 
+function resetGame()
+{
+    currentState=[0,0,0,0,0,0,0,0,0];
+    location.reload();
+}
+
 function gameStateCheck()
 {
     //horizontal
@@ -28,117 +32,125 @@ function gameStateCheck()
         if(currentState[0]==currentState[1]==currentState[2]==1)
         {
             alert('player1 won');
-            location.reload();
+            resetGame();
+            return;
         }
         else if (currentState[0]==currentState[1]==currentState[2]==1) 
         {
             alert('player2 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        return;
+        
     }
     else if((currentState[3]!=0 && currentState[4] !=0 && currentState[5]!=0))
     {
-        if(currentState[3]==1 && currentState[4] ==1 && currentState[5]==1)
+        if(currentState[3]== currentState[4] == currentState[5]==1)
         {
             alert('player1 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        else if(currentState[3]==2 && currentState[4] ==2 && currentState[5]==2)
+        else if(currentState[3]==currentState[4] ==currentState[5]==2)
         {
             alert('player2 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        return;
     }
     else if((currentState[6] !=0 && currentState[7] !=0 && currentState[8]!=0))
     {
         if(currentState[6] == 1 && currentState[7] ==1 && currentState[8]==1)
         {
             alert('player1 won');
-            location.reload();
+            resetGame();
+            return;
         }
         else if(currentState[6] == 2 && currentState[7] ==2 && currentState[8]==2)
         {
             alert('player2 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        return;
     }
     //vertical
-    else if((currentState[0] !=0 && currentState[3] !=0 && currentState[6]!=0))
+    if((currentState[0] !=0 && currentState[3] !=0 && currentState[6]!=0))
     {
         if(currentState[0] ==1 && currentState[3] ==1 && currentState[6]==1)
         {
             alert('player1 won');
-            location.reload();
+            resetGame();
+            return;
         }
         else if(currentState[0] ==2 && currentState[3] ==2 && currentState[6]==2)
         {
             alert('player2 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        return;
     }
     else if((currentState[1] !=0 && currentState[4] !=0 && currentState[7]!=0))
     {
         if(currentState[1] == 1 && currentState[4] == 1 && currentState[7] == 1)
         {
             alert('player1 won');
-            location.reload();
+            resetGame();
+            return;
         }
         else if (currentState[1] == 2 && currentState[4] == 2 && currentState[7] == 2)
         {
             alert('player2 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        return;
     }
     else if((currentState[2] !=0 && currentState[5] !=0 && currentState[8]!=0))
     {
         if(currentState[2] == 1 && currentState[5] == 1 && currentState[8] !=1 )
         {
             alert('player1 won');
-            location.reload();
+            resetGame();
+            return;
         }
         else if (currentState[2] == 2 && currentState[5] == 2 && currentState[8] !=2 )
         {
             alert('player2 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        return;
     } 
     //diag 
-    else if((currentState[0] !=0 && currentState[4] !=0 && currentState[8]!=0))
+    if((currentState[0] !=0 && currentState[4] !=0 && currentState[8]!=0))
     {
         if(currentState[0] ==1 && currentState[4] ==1 && currentState[8]==1)
         {
             alert('player1 won');
-            location.reload();
+            resetGame();
+            return;
         }
         else if (currentState[0] ==2 && currentState[4] ==2 && currentState[8]==2 )
         {
             alert('player2 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        return;
     }  
     else if((currentState[2] !=0 && currentState[4] !=0 && currentState[6]!=0))
     {
         if(currentState[2] ==1 && currentState[4] ==1 && currentState[6]==1)
         {
             alert('player1 won');
-            location.reload();
+            resetGame();
+            return;
         }
         else if (currentState[2] ==2 && currentState[4] ==2 && currentState[6]==2 )
         {
             alert('player2 won');
-            location.reload();
+            resetGame();
+            return;
         }
-        return;
     }      
 }
-
 
 function playerClicked1()
 {
